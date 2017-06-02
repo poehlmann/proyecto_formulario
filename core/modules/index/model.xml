@@ -17,12 +17,12 @@
 				<field name="is_public" type="boolean" default="0"></field>
 				<field name="created_at" type="datetime" default="now"></field>
 		</table>
-		<table name="category">
+		<table name="formulario">
 				<field name="id" type="int" null="not" key="primary" extra="auto_increment"></field>
 				<field name="name" type="varchar" size="50" required="false"></field>
 		</table>
 		<table name="post_category">
 				<field name="post_id" type="int" null="not" foreign-table="post" foreign-reference="id"></field>
-				<field name="category_id" type="int" null="not" foreign-table="category" foreign-reference="id"></field>
+				<field name="category_id" type="int" null="not" foreign-table="formulario" foreign-reference="id"></field>
 		</table>
 	</tables>

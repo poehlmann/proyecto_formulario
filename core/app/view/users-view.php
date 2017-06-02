@@ -36,11 +36,12 @@
 			</thead>
 			<?php
 			foreach($users as $user){
+			    $person = PersonData::getById($user->id_person)
 				?>
 				<tr>
-				<td><?php echo $user->name." ".$user->lastname; ?></td>
+				<td><?php echo $person->name." ".$person->lastname; ?></td>
 				<td><?php echo $user->username; ?></td>
-				<td><?php echo $user->email; ?></td>
+				<td><?php echo $person->email; ?></td>
 				<td>
 					<?php if($user->is_active):?>
 						<i class="glyphicon glyphicon-ok"></i>

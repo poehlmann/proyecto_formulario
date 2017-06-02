@@ -3,25 +3,38 @@ class PersonData {
 	public static $tablename = "person";
 
 
-	public function PersonData(){
-        $this->company = "";
+	public function __construct(){
 		$this->name = "";
 		$this->lastname = "";
+		$this->address="";
+		$this->phone="";
 		$this->email = "";
-		$this->image = "";
 		$this->password = "";
 		$this->created_at = "NOW()";
 	}
 
-	public function add_client(){
-		$sql = "insert into person (name,lastname,address1,email1,phone1,kind,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->address1\",\"$this->email1\",\"$this->phone1\",1,$this->created_at)";
-		Executor::doit($sql);
-	}
+    public static function getLastRecord(){
+        $sql  = "SELECT * FROM ".self::$tablename." ORDER BY id DESC LIMIT 1";
+        $query = Executor::doit($sql);
+        $found = null;
+        $data = new PersonData();
+        while($r = $query[0]->fetch_array()){
+            $data->id = $r['id'];
+            $data->name = $r['name'];
+            $data->lastname = $r['lastname'];
+            $data->address1 = $r['address'];
+            $data->phone = $r['phone'];
+            $data->email = $r['email'];
+            $data->created_at = $r['created_at'];
+            $found = $data;
+            break;
+        }
+        return $found;
+    }
 
-	public function add_provider(){
-		$sql = "insert into person (company,name,lastname,address1,email1,phone1,kind,created_at) ";
-		$sql .= "value (\"$this->company\",\"$this->name\",\"$this->lastname\",\"$this->address1\",\"$this->email1\",\"$this->phone1\",2,$this->created_at)";
+	public function add(){
+		$sql = "insert into ".self::$tablename." (name,lastname,address,email,phone,kind,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->address\",\"$this->email\",\"$this->phone\",1,$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -36,17 +49,7 @@ class PersonData {
 
 // partiendo de que ya tenemos creado un objecto PersonData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\",email1=\"$this->email1\",address1=\"$this->address1\",lastname=\"$this->lastname\",phone1=\"$this->phone1\" where id=$this->id";
-		Executor::doit($sql);
-	}
-
-	public function update_client(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\",email1=\"$this->email1\",address1=\"$this->address1\",lastname=\"$this->lastname\",phone1=\"$this->phone1\" where id=$this->id";
-		Executor::doit($sql);
-	}
-
-	public function update_provider(){
-		$sql = "update ".self::$tablename." set company=\"$this->company\",name=\"$this->name\",email1=\"$this->email1\",address1=\"$this->address1\",lastname=\"$this->lastname\",phone1=\"$this->phone1\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\",email=\"$this->email\",address=\"$this->address\",lastname=\"$this->lastname\",phone=\"$this->phone\" where id=$this->id";
 		Executor::doit($sql);
 	}
 
@@ -55,7 +58,6 @@ class PersonData {
 		Executor::doit($sql);
 	}
 
-
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
@@ -63,12 +65,11 @@ class PersonData {
 		$data = new PersonData();
 		while($r = $query[0]->fetch_array()){
 			$data->id = $r['id'];
-            $data->company = $r['company'];
 			$data->name = $r['name'];
 			$data->lastname = $r['lastname'];
-			$data->address1 = $r['address1'];
-			$data->phone1 = $r['phone1'];
-			$data->email1 = $r['email1'];
+			$data->address = $r['address'];
+			$data->phone = $r['phone'];
+			$data->email = $r['email'];
 			$data->created_at = $r['created_at'];
 			$found = $data;
 			break;
@@ -86,13 +87,11 @@ class PersonData {
 		while($r = $query[0]->fetch_array()){
 			$array[$cnt] = new PersonData();
 			$array[$cnt]->id = $r['id'];
-            $array[$cnt]->company = $r['company'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
-			$array[$cnt]->email = $r['email1'];
-			$array[$cnt]->username = $r['username'];
-			$array[$cnt]->phone1 = $r['phone1'];
-			$array[$cnt]->address1 = $r['address1'];
+			$array[$cnt]->email = $r['email'];
+			$array[$cnt]->phone = $r['phone'];
+			$array[$cnt]->address = $r['address'];
 			$array[$cnt]->created_at = $r['created_at'];
 			$cnt++;
 		}
@@ -109,30 +108,9 @@ class PersonData {
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
-			$array[$cnt]->email1 = $r['email1'];
-			$array[$cnt]->phone1 = $r['phone1'];
-			$array[$cnt]->address1 = $r['address1'];
-			$array[$cnt]->created_at = $r['created_at'];
-			$cnt++;
-		}
-		return $array;
-	}
-
-
-	public static function getProviders(){
-		$sql = "select * from ".self::$tablename." where kind=2 order by name,lastname";
-		$query = Executor::doit($sql);
-		$array = array();
-		$cnt = 0;
-		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
-			$array[$cnt]->id = $r['id'];
-            $array[$cnt]->company = $r['company'];
-			$array[$cnt]->name = $r['name'];
-			$array[$cnt]->lastname = $r['lastname'];
-			$array[$cnt]->email1 = $r['email1'];
-			$array[$cnt]->phone1 = $r['phone1'];
-			$array[$cnt]->address1 = $r['address1'];
+			$array[$cnt]->email = $r['email'];
+			$array[$cnt]->phone = $r['phone'];
+			$array[$cnt]->address = $r['address'];
 			$array[$cnt]->created_at = $r['created_at'];
 			$cnt++;
 		}
@@ -157,5 +135,3 @@ class PersonData {
 
 
 }
-
-?>

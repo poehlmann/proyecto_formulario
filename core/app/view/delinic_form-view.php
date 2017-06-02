@@ -1,5 +1,5 @@
 <?php
 
-$inic_form = inic_formData::getById($_GET["id"]);
-$inic_form->del();
+$inic_form = inic_formData::delById($_GET["id"]);
+
 Core::redir("./index.php?view=inic_form");

@@ -190,7 +190,7 @@ class Chart extends AbstractPart
 
         $index = 0;
         foreach ($series as $seriesItem) {
-            $categories = $seriesItem['categories'];
+            $categories = $seriesItem['formulario'];
             $values = $seriesItem['values'];
 
             $xmlWriter->startElement('c:ser');

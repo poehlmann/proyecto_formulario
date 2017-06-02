@@ -58,7 +58,7 @@
 
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                  <span class=""><?php if(isset($_SESSION["user_id"]) ){ echo UserData::getById($_SESSION["user_id"])->name; 
+                  <span class=""><?php if(isset($_SESSION["user_id"]) ){ echo PersonData::getById(UserData::getById($_SESSION["user_id"])->id_person)->name;
 
                   }?> <b class="caret"></b> </span>
 
@@ -90,8 +90,7 @@
             <li class="treeview">
               <a href="#"><i class='fa fa-database'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="./?view=categories">Categorias</a></li>
-                <li><a href="./?view=clients">Clientes</a></li>
+                <li><a href="./?view=formulario">Formularios</a></li>
               </ul>
             </li>
 
@@ -100,7 +99,6 @@
               <a href="#"><i class='fa fa-cog'></i> <span>Configuracion</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="./?view=users">Usuarios</a></li>
-                <li><a href="./?view=settings">Configuracion</a></li>
               </ul>
             </li>
           <?php endif;?>

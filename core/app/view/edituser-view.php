@@ -1,4 +1,6 @@
-<?php $user = UserData::getById($_GET["id"]);?>
+<?php $person= PersonData::getById(UserData::getById($_GET["id"])->id_person);
+      $user =  UserData::getById($_GET["id"]);
+?>
 <div class="row">
 	<div class="col-md-12">
 	<h1>Editar Usuario</h1>
@@ -9,13 +11,13 @@
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Nombre*</label>
     <div class="col-md-6">
-      <input type="text" name="name" value="<?php echo $user->name;?>" class="form-control" id="name" placeholder="Nombre">
+      <input type="text" name="name" value="<?php echo $person->name;?>" class="form-control" id="name" placeholder="Nombre">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Apellido*</label>
     <div class="col-md-6">
-      <input type="text" name="lastname" value="<?php echo $user->lastname;?>" required class="form-control" id="lastname" placeholder="Apellido">
+      <input type="text" name="lastname" value="<?php echo $person->lastname;?>" required class="form-control" id="lastname" placeholder="Apellido">
     </div>
   </div>
   <div class="form-group">
@@ -27,7 +29,7 @@
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Email*</label>
     <div class="col-md-6">
-      <input type="text" name="email" value="<?php echo $user->email;?>" class="form-control" id="email" placeholder="Email">
+      <input type="text" name="email" value="<?php echo $person->email;?>" class="form-control" id="email" placeholder="Email">
     </div>
   </div>
 

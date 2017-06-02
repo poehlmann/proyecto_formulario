@@ -20,7 +20,6 @@ class inic_formData {
     public function add(){
         $sql = "insert into ".self::$tablename." (id_usuario,correlativo,fecha_proyecto,nombre_instalador,nombre_proyecto,localizacion,contrato_orden_trabajo,sector_trabajo,area_aceptada) ";
         $sql .= "values (\"$this->id_usuario\",\"$this->correlativo\",\"$this->fecha_proyecto\",\"$this->nombre_instalador\",\"$this->nombre_proyecto\",\"$this->localizacion\",\"$this->contrato_orden_trabajo\",\"$this->sector_trabajo\",\"$this->area_aceptada\")";
-        print $sql;
         Executor::doit($sql);
     }
 
@@ -36,7 +35,6 @@ class inic_formData {
 // partiendo de que ya tenemos creado un objecto inic_formData previamente utilizamos el contexto
     public function update(){
         $sql = "update ".self::$tablename." set correlativo=\"$this->correlativo\",nombre_instalador=\"$this->nombre_instalador\",nombre_proyecto=\"$this->nombre_proyecto\",localizacion=\"$this->localizacion\",contrato_orden_trabajo=\"$this->contrato_orden_trabajo\",sector_trabajo=\"$this->sector_trabajo\",area_aceptada=\"$this->area_aceptada\",fecha_proyecto=\"$this->fecha_proyecto\" where id_usuario=$this->id_usuario";
-        print $sql;
         Executor::doit($sql);
     }
 

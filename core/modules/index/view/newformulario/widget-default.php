@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 	<h1>Nueva Categoria</h1>
 	<br>
-		<form class="form-horizontal" method="post" id="addcategory" action="index.php?view=addcategory" role="form">
+		<form class="form-horizontal" method="post" id="addformulario" action="index.php?view=addformulario" role="form">
 
 
   <div class="form-group">

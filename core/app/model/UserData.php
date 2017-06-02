@@ -2,20 +2,16 @@
 class UserData {
 	public static $tablename = "user";
 
-
-
-	public function Userdata(){
-		$this->name = "";
-		$this->lastname = "";
-		$this->email = "";
-		$this->image = "";
+	public function __construct(){
+	    $this->username="";
+	    $this->id_person="";
 		$this->password = "";
 		$this->created_at = "NOW()";
 	}
 
 	public function add(){
-		$sql = "insert into user (name,lastname,username,email,is_admin,password,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->username\",\"$this->email\",\"$this->is_admin\",\"$this->password\",$this->created_at)";
+		$sql = "insert into user (id_person,username,is_admin,password,created_at) ";
+		$sql .= "value (\"$this->id_person\",\"$this->username\",\"$this->is_admin\",\"$this->password\",$this->created_at)";
 		Executor::doit($sql);
 	}
 

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>PROTOCOLO DE ACEPTACIÓN DE SUPERFICIE DE TERRENO</h1>
+        <h1>Protocolo de aceptacion de superficie de terreno</h1>
         <br>
         <?php
 

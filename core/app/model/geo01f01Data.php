@@ -6,21 +6,15 @@ class geo01f01Data {
 
     public function geo01f01Data(){
         $this->id_usuario=$_SESSION['user_id'];
-        $this->correlativo = "";
-        $this->nombre_instalador = "";
-        $this->nombre_proyecto = "";
-        $this->localizacion = "";
-        $this->contrato_orden_trabajo= "";
-        $this->sector_trabajo="";
-        $this->area_aceptada="";
-        $this->fecha_proyecto ="";
+        $this->id_solicitud_form ="";
         $this->aceptado_rechazado="";
         $this->fecha_aceptacion = "NOW()";
     }
 
     public function add(){
-        $sql = "insert into ".self::$tablename." (id_usuario,aceptado_rechazado,correlativo,fecha_proyecto,nombre_instalador,nombre_proyecto,localizacion,contrato_orden_trabajo,sector_trabajo,area_aceptada) ";
-        $sql .= "values (\"$this->id_usuario\",\"$this->aceptado_rechazado\",\"$this->correlativo\",\"$this->fecha_proyecto\",\"$this->nombre_instalador\",\"$this->nombre_proyecto\",\"$this->localizacion\",\"$this->contrato_orden_trabajo\",\"$this->sector_trabajo\",\"$this->area_aceptada\")";
+        $sql = "insert into ".self::$tablename." (id_usuario,aceptado_rechazado,id_solicitud_form,fecha_aceptacion) ";
+        $sql .= "values (\"$this->id_usuario\",\"$this->aceptado_rechazado\",\"$this->id_solicitud_form\",\"$this->fecha_aceptacion\")";
+        print $sql;
         Executor::doit($sql);
     }
 

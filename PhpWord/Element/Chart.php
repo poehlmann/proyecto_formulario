@@ -100,7 +100,7 @@ class Chart extends AbstractElement
      */
     public function addSeries($categories, $values)
     {
-        $this->series[] = array('categories' => $categories, 'values' => $values);
+        $this->series[] = array('formulario' => $categories, 'values' => $values);
     }
 
     /**

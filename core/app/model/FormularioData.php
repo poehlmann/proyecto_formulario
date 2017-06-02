@@ -1,9 +1,10 @@
 <?php
-class ConfigurationData {
-	public static $tablename = "configuration";
+class FormularioData {
+	public static $tablename = "formulario";
 
 
-	public function ConfigurationData(){
+
+	public function __construct(){
 		$this->name = "";
 		$this->lastname = "";
 		$this->email = "";
@@ -13,8 +14,8 @@ class ConfigurationData {
 	}
 
 	public function add(){
-		$sql = "insert into user (name,lastname,email,password,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->email\",\"$this->password\",$this->created_at)";
+		$sql = "insert into formulario (name,created_at) ";
+		$sql .= "value (\"$this->name\",$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -27,23 +28,21 @@ class ConfigurationData {
 		Executor::doit($sql);
 	}
 
-// partiendo de que ya tenemos creado un objecto ConfigurationData previamente utilizamos el contexto
+// partiendo de que ya tenemos creado un objecto CategoryData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set val=\"$this->val\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\" where id=$this->id";
 		Executor::doit($sql);
 	}
+
 
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		$found = null;
-		$data = new ConfigurationData();
+		$data = new FormularioData();
 		while($r = $query[0]->fetch_array()){
 			$data->id = $r['id'];
 			$data->name = $r['name'];
-			$data->lastname = $r['lastname'];
-			$data->email = $r['email'];
-			$data->password = $r['password'];
 			$data->created_at = $r['created_at'];
 			$found = $data;
 			break;
@@ -51,23 +50,6 @@ class ConfigurationData {
 		return $found;
 	}
 
-	public static function getByMail($mail){
-		$sql = "select * from ".self::$tablename." where email=\"$mail\"";
-		$query = Executor::doit($sql);
-		$array = array();
-		$cnt = 0;
-		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new ConfigurationData();
-			$array[$cnt]->id = $r['id'];
-			$array[$cnt]->name = $r['name'];
-			$array[$cnt]->lastname = $r['lastname'];
-			$array[$cnt]->email = $r['email'];
-			$array[$cnt]->password = $r['password'];
-			$array[$cnt]->created_at = $r['created_at'];
-			$cnt++;
-		}
-		return $array;
-	}
 
 
 	public static function getAll(){
@@ -76,12 +58,10 @@ class ConfigurationData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new ConfigurationData();
+			$array[$cnt] = new FormularioData();
 			$array[$cnt]->id = $r['id'];
-			$array[$cnt]->short = $r['name'];
 			$array[$cnt]->name = $r['name'];
-			$array[$cnt]->kind = $r['kind'];
-			$array[$cnt]->val = $r['val'];
+			$array[$cnt]->created_at = $r['created_at'];
 			$cnt++;
 		}
 		return $array;
@@ -94,11 +74,9 @@ class ConfigurationData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new ConfigurationData();
+			$array[$cnt] = new FormularioData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
-			$array[$cnt]->mail = $r['mail'];
-			$array[$cnt]->password = $r['password'];
 			$array[$cnt]->created_at = $r['created_at'];
 			$cnt++;
 		}
