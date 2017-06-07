@@ -2,71 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="467b729d-c22e-41b2-b28d-1fef01a433c7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/action/actiontestsearchproduct-action.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/action/searchproduct-action.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/model/ConfigurationData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/model/OperationData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/model/OperationTypeData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/addclient-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/clients-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/delclient-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/editclient-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/editproduct-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/history-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/hystory_old-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/newclient-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/processinput-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/reports-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/settings-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/app/view/updateclient-view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/action/actiontest/action-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/action/actiontest/searchproduct/action-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/action/addpost/action-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/action/searchproduct/action-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/action/updatepost/action-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/addclient/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/clients/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/delclient/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/editclient/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/history/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/home/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/hystory_old/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/newclient/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/processinput/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/settings/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/core/modules/index/view/updateclient/widget-default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/clients-word.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/model/CategoryData.php" afterPath="$PROJECT_DIR$/core/app/model/FormularioData.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/addcategory-view.php" afterPath="$PROJECT_DIR$/core/app/view/addformulario-view.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/categories-view.php" afterPath="$PROJECT_DIR$/core/modules/index/view/formulario/widget-default.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/delcategory-view.php" afterPath="$PROJECT_DIR$/core/app/view/delformulario-view.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/editcategory-view.php" afterPath="$PROJECT_DIR$/core/modules/index/view/editformulario/widget-default.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/newcategory-view.php" afterPath="$PROJECT_DIR$/core/modules/index/view/newformulario/widget-default.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/app/view/updatecategory-view.php" afterPath="$PROJECT_DIR$/core/app/view/updateformulario-view.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/modules/index/view/categories/widget-default.php" afterPath="$PROJECT_DIR$/core/app/view/formulario-view.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/modules/index/view/editcategory/widget-default.php" afterPath="$PROJECT_DIR$/core/app/view/editformulario-view.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/modules/index/view/newcategory/widget-default.php" afterPath="$PROJECT_DIR$/core/app/view/newformulario-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhpWord/Element/Chart.php" afterPath="$PROJECT_DIR$/PhpWord/Element/Chart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhpWord/Writer/Word2007/Part/Chart.php" afterPath="$PROJECT_DIR$/PhpWord/Writer/Word2007/Part/Chart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/action/processlogin-action.php" afterPath="$PROJECT_DIR$/core/app/action/processlogin-action.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/layouts/layout.php" afterPath="$PROJECT_DIR$/core/app/layouts/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/model/PersonData.php" afterPath="$PROJECT_DIR$/core/app/model/PersonData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/model/UserData.php" afterPath="$PROJECT_DIR$/core/app/model/UserData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/model/geo01f01Data.php" afterPath="$PROJECT_DIR$/core/app/model/geo01f01Data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/model/inic_formData.php" afterPath="$PROJECT_DIR$/core/app/model/inic_formData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/addgeo01f01-view.php" afterPath="$PROJECT_DIR$/core/app/view/addgeo01f01-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/adduser-view.php" afterPath="$PROJECT_DIR$/core/app/view/adduser-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/delinic_form-view.php" afterPath="$PROJECT_DIR$/core/app/view/delinic_form-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/edituser-view.php" afterPath="$PROJECT_DIR$/core/app/view/edituser-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/geo01f01-view.php" afterPath="$PROJECT_DIR$/core/app/view/geo01f01-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/home-view.php" afterPath="$PROJECT_DIR$/core/app/view/home-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/app/view/users-view.php" afterPath="$PROJECT_DIR$/core/app/view/users-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/modules/index/model.xml" afterPath="$PROJECT_DIR$/core/modules/index/model.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/modules/index/view/addcategory/widget-default.php" afterPath="$PROJECT_DIR$/core/modules/index/view/addcategory/widget-default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/modules/index/view/delcategory/widget-default.php" afterPath="$PROJECT_DIR$/core/modules/index/view/delcategory/widget-default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/modules/index/view/updatecategory/widget-default.php" afterPath="$PROJECT_DIR$/core/modules/index/view/updatecategory/widget-default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo.sql" afterPath="$PROJECT_DIR$/geo.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -98,8 +35,8 @@
       <file leaf-file-name="addgeo01f01-view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/app/view/addgeo01f01-view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="162">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -196,10 +133,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -223,24 +160,6 @@
               <item name="upsa-formulario" type="b2602c69:ProjectViewProjectNode" />
               <item name="upsa-formulario" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="upsa-formulario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upsa-formulario" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upsa-formulario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upsa-formulario" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upsa-formulario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upsa-formulario" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -253,10 +172,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/odoo10/custom/addons/solt_redis_store" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core/modules/index" />
     </key>
   </component>
@@ -368,15 +288,24 @@
       <workItem from="1496346364363" duration="5329000" />
       <workItem from="1496372292388" duration="1643000" />
       <workItem from="1496409340800" duration="1848000" />
-      <workItem from="1496415104163" duration="5000" />
+      <workItem from="1496415104163" duration="237000" />
+      <workItem from="1496862520349" duration="62000" />
     </task>
+    <task id="LOCAL-00001" summary="modificaciones de mejora y eficiencia">
+      <created>1496415147105</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496415147105</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8825000" />
+    <option name="totallyTimeSpent" value="9119000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -390,7 +319,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18293363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26324597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -412,6 +341,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modificaciones de mejora y eficiencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificaciones de mejora y eficiencia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -450,7 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,8 +591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/app/view/addgeo01f01-view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="162">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
